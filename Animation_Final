@@ -1,0 +1,111 @@
+<html>
+<head>
+	<title>Template for JavaScript</title>
+
+</head>
+
+<body>
+
+
+
+	<script>
+		var timeoutID;
+		var count =0;
+
+		function startAnimation() {
+
+		  timeoutID = window.setInterval(animate, 100);
+		}
+
+		function animate() {
+			count ++;
+			var sec = new Date().getSeconds();
+			var img = document.images[0];
+
+			var x = document.getElementById("counter");
+			x.innerHTML="Count: " + count;
+
+			if (count % 20 == 1)
+				img.src="p1.jpg";
+		  	else if (count % 20 == 2)
+				img.src="p2.jpg";
+		  	else if (count % 20 == 3)
+				img.src="p3.jpg";
+
+			else if (count % 20 == 4)
+				img.src="p4.jpg";
+			else if (count % 20 == 5)
+				img.src="p5.jpg";
+			else if (count % 20 == 6)
+				img.src="p6.jpg";
+			else if (count % 20 == 7)
+				img.src="p7.jpg";
+			else if (count % 20 == 8)
+				img.src="p8.jpg";
+			else if (count % 20 == 9)
+				img.src="p9.jpg";
+			else if (count % 20 == 10)
+				img.src="p10.jpg";
+			else if (count % 20 == 11)
+				img.src="p11.jpg";
+			else if (count % 20 == 12)
+				img.src="p12.jpg";
+			else if (count % 20 == 13)
+				img.src="p13.jpg";
+			else if (count % 20 == 14)
+				img.src="p14.jpg";
+			else if (count % 20 == 15)
+				img.src="p15.jpg";
+			else if (count % 20 == 16)
+				img.src="p16.jpg";
+			else if (count % 20 == 17)
+				img.src="p17.jpg";
+			else if (count % 20 == 18)
+				img.src="p18.jpg";
+		  	else if (count % 20 == 19)
+				img.src="p19.jpg";
+		  	else
+		  		img.src = "p20.jpg";
+
+
+		  	//alert("That was really slow!   " + sec + "   " + count);
+		}
+
+		function stopAnimation() {
+		  window.clearTimeout(timeoutID);
+		}
+
+	</script>
+
+
+	<h1>Animation</h1>
+	<p align = center>
+		<img src="p18.jpg">
+		<br>
+		<button onclick="startAnimation();">Start animation</button>
+		<button onclick="stopAnimation();">Stop Animation.</button>
+	</p>
+	<p id = "counter" align=center> Count: </p>
+
+	<p id="demo">Click the button to start the animation.</p>
+	<p>
+		<a href="http://supercs.net/codeOrgDemos/HorsePics/ex_animate.html">Demo posted live: http://supercs.net/codeOrgDemos/HorsePics/ex_animate.html</a>
+	</p>
+	<h2>Student Questions: </h2>
+	<ol>
+		<li>What is the largest value that can be stored in count?   </li>
+		<li>What happens when count hits this limit? </li>
+		<li>How could we prevent this? </li>
+		<li>Lets say you need to animate a series of 90 images. What would you need to change? </li>
+
+
+	</ol>
+
+	<h2>Extensions: </h2>
+	<ul>
+	       <li>Use this to introduce/motivate arrays? img.src = array[count % 20] </li>
+	</ul>
+</body>
+
+
+</html>
