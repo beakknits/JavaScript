@@ -1,0 +1,73 @@
+<html>
+<head>
+	<title>Template for JavaScript</title>
+
+</head>
+
+<body>
+
+
+
+	<script>
+		var timeoutID;
+		var count =0;
+
+
+		function drawHouse() {
+			var len = 400;
+			var wid = 200;
+
+
+			var c=document.getElementById("pictureBox");
+			var ctx=c.getContext("2d");
+
+			ctx.beginPath();
+			ctx.lineWidth="6";
+			//ctx.strokeStyle="red";
+			//ctx.rect(20,20,len,wid);   // <---- parameters
+
+			ctx.stroke();
+			for (var x = 10; x < 500; x = x + 50)
+			{
+				ctx.beginPath();
+				ctx.lineWidth="8";
+				ctx.strokeStyle= "#00aaff";
+				ctx.fillStyle = "#00aaff";
+				ctx.fillRect(x,x, 50, 50);
+				ctx.stroke();
+
+				ctx.beginPath();
+				ctx.lineWidth="6";
+				ctx.strokeStyle= "red";
+				ctx.rect(x + 5,x + 5, 45, 50);
+				ctx.stroke();
+			}
+
+
+
+
+			}
+
+
+	</script>
+
+
+	<h1>Drawing</h1>
+	<p align = center>
+
+		<br>
+			<canvas id="pictureBox" width="500" height="400" style="border:1px dotted #d3d3d3;">
+			Your browser does not support the HTML5 canvas tag.</canvas>
+			<br>
+			<button onclick="drawHouse();">Draw</button>
+
+	</p>
+
+
+
+
+
+	</body>
+
+
+</html>
